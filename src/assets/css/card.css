@@ -1,0 +1,76 @@
+.note-card-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 150px;
+  height: 100%;
+  border-radius: 0.3rem;
+  background-color: white;
+  color: #333;
+  padding: 1.5rem;
+  overflow: hidden;
+}
+
+.card-title {
+  font-size: 1.2rem;
+  --max-lines: 2;
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: var(--max-lines);
+  word-wrap: break-word;
+  cursor: pointer;
+}
+
+.card-body {
+  margin: 0.5rem 0;
+  --max-lines: 2;
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: var(--max-lines);
+}
+
+.card-details {
+  font-size: 14px;
+  color: gray;
+  cursor: pointer;
+  width: fit-content;
+}
+
+.card-footer {
+  margin-top: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card-timeline {
+  font-size: 14px;
+  color: gray;
+  font-style: italic;
+}
+
+.card-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+.action-item {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.action-item:hover {
+  opacity: 1;
+}
+
+.action-item .edit {
+  color: rgb(8, 64, 131);
+}
+
+.action-item .delete {
+  color: rgb(222, 63, 5);
+}

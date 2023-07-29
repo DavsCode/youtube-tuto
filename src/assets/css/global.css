@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.blue-palette {
+  background-image: linear-gradient(to bottom, #0d1282, #0a6ebd);
+}
+
+.rose-palette {
+  background-image: linear-gradient(to bottom, #ff2171, #f266ab);
+}
+
+.violet-palette {
+  background-image: linear-gradient(to bottom, #360d95, #4e31aa);
+}
+
+.black-palette {
+  background-image: linear-gradient(to bottom, #333, #444);
+}

@@ -1,0 +1,83 @@
+.navbar {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: gray;
+  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.5);
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.nav-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  color: white;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.nav-options {
+  display: flex;
+  align-items: center;
+}
+
+.nav-icon {
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.5);
+  margin-left: 1rem;
+  cursor: pointer;
+  position: relative;
+}
+
+.nav-icon i {
+  font-size: 1.5rem;
+}
+
+.nav-icon:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.palettes {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  right: 0px;
+  padding: 0.5rem 1rem;
+  gap: 1rem;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 20px;
+  transition: all 0.3s;
+  opacity: 0;
+  z-index: -1;
+}
+
+.palettes.active {
+  right: 50px;
+  opacity: 1;
+  z-index: 1;
+}
+
+.palette-item {
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+}
+
+.palette-item.active,
+.palette-item:hover {
+  border: 2px solid white;
+}

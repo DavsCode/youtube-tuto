@@ -1,0 +1,70 @@
+.note-details {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100vh;
+  /* display: flex; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  backdrop-filter: blur(15px);
+}
+
+.details-wrapper {
+  width: 40%;
+  min-height: 300px;
+  padding: 1.5rem;
+  background-color: white;
+  color: #333;
+  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.5);
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.details-back-btn {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  border: none;
+  background-color: rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.details-back-btn i {
+  font-size: 1.2rem;
+}
+
+.details-title {
+  font-size: 1.3rem;
+}
+
+.details-timeline {
+  font-size: 1rem;
+  color: gray;
+  font-style: italic;
+}
+
+@media (max-width: 991px) {
+  .details-wrapper {
+    width: 70%;
+  }
+}
+
+@media (max-width: 768px) {
+  .details-wrapper {
+    width: 80%;
+  }
+}
+
+@media (max-width: 580px) {
+  .details-wrapper {
+    width: 90%;
+  }
+}
