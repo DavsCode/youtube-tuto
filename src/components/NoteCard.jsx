@@ -4,6 +4,11 @@ export const NoteCard = ({ onPreview, onUpdate, onDelete, note }) => {
   return (
     <div className="note-card">
       <div className="note-card-wrapper">
+        {note?.image && (
+          <div className="card-image">
+            <img src={note.image} alt="" />
+          </div>
+        )}
         <h2 className="card-title" onClick={() => onPreview(note)}>
           {note?.title}
         </h2>

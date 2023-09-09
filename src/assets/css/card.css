@@ -11,6 +11,21 @@
   overflow: hidden;
 }
 
+.card-image {
+  height: 150px;
+  width: 100%;
+  border-radius: 0.3rem;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+}
+
+.card-image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
 .card-title {
   font-size: 1.2rem;
   --max-lines: 2;

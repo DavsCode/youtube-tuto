@@ -5,6 +5,7 @@ import { NoteCard } from "./components/NoteCard";
 import { NoteDetails } from "./components/NoteDetails";
 import { UpsertNote } from "./components/UpsertNote";
 import { PaletteContext } from "./context/PaletteContext";
+import * as services from "./services/services";
 
 const palettes = [
   { id: 1, color: "#0d1282", name: "blue-palette" },
@@ -25,22 +26,25 @@ export default function App() {
       ? palettes.find((p) => p.id === state.palette.id)
       : palettes[0]
   );
+
+  const [image, setImage] = useState(null);
+
   let filteredNotes = [];
 
   useEffect(() => {
-    const tempNotes = JSON.parse(localStorage.getItem("notes"));
-    tempNotes && setNotes(tempNotes);
+    const loadNotes = async () => {
+      const res = await services.getNotesAsync();
+      res && setNotes(res);
+    };
+    loadNotes();
   }, []);
 
-  const saveNotes = (items) => {
-    localStorage.setItem("notes", JSON.stringify(items));
-  };
-
-  const handleCreateNote = (note) => {
+  const handleCreateNote = async (note) => {
     if (note) {
-      const tempNotes = [...notes, note];
+      const res = await services.createNoteAsync(note, image);
+      const tempNotes = [...notes, res];
       setNotes(tempNotes);
-      saveNotes(tempNotes);
+      setImage(null);
     }
   };
 
@@ -49,19 +53,22 @@ export default function App() {
     setOnCreateNote(true);
   };
 
-  const handleUpdateNote = (note) => {
+  const handleUpdateNote = async (note) => {
     if (note) {
-      const tempNotes = [...notes.map((n) => (n.id === note.id ? note : n))];
-      setNotes(tempNotes);
-      setCurrentNote(null);
-      saveNotes(tempNotes);
+      const res = await services.updateNoteAsync(note, image);
+      if (res) {
+        const tempNotes = [...notes.map((n) => (n.id === res.id ? res : n))];
+        setNotes(tempNotes);
+        setCurrentNote(null);
+        setImage(null);
+      }
     }
   };
 
-  const handleDeleteNote = (noteId) => {
+  const handleDeleteNote = async (noteId) => {
+    await services.deleNoteAsync(noteId);
     const tempNotes = [...notes.filter((n) => n.id !== noteId)];
     setNotes(tempNotes);
-    saveNotes(tempNotes);
   };
 
   const handleOnPreview = (note) => {
@@ -121,13 +128,20 @@ export default function App() {
         {onCreateNote && (
           <UpsertNote
             note={currentNote}
+            image={image}
+            setImage={setImage}
             createNote={handleCreateNote}
             updateNote={handleUpdateNote}
             setOpen={setOnCreateNote}
+            setCurrNote={setCurrentNote}
           />
         )}
         {onViewNote && (
-          <NoteDetails note={currentNote} setView={setOnViewNote} />
+          <NoteDetails
+            note={currentNote}
+            setCurrNote={setCurrentNote}
+            setView={setOnViewNote}
+          />
         )}
       </div>
     </div>
