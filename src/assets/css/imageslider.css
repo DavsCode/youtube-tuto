@@ -1,0 +1,41 @@
+.images-slider {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.images-slider-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 40px;
+  width: 40px;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: var(--white);
+  z-index: 100;
+  cursor: pointer;
+}
+
+.images-slider-close:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.images-slider-close i {
+  font-size: 1.2rem;
+}
+
+.slider-container,
+.slider-container .swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.image-slide {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}

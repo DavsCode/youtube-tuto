@@ -1,0 +1,82 @@
+.register {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--blue);
+}
+
+.register .wrapper {
+  width: 450px;
+  padding: 1.5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--white);
+  color: var(--blue);
+  border-radius: 0.5rem;
+}
+
+.register .wrapper .heading {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.register .wrapper .form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+}
+
+.register .wrapper .form .error-msg {
+  color: orangered;
+  text-align: center;
+  padding: 0.5rem 0;
+}
+
+.register .wrapper .form input {
+  padding: 0.8rem 0.8rem;
+  border-radius: 0.3rem;
+  font-size: 1rem;
+  border: var(--border);
+  outline: none;
+  color: var(--black);
+  margin-bottom: 1rem;
+}
+
+.register .wrapper .form input::placeholder {
+  color: gray;
+}
+
+.register .wrapper .form button {
+  padding: 0.8rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--white);
+  background-color: var(--blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.8;
+}
+
+.register .wrapper .form button:hover {
+  opacity: 1;
+}
+
+.register .wrapper .form .link {
+  margin-top: 1rem;
+  text-align: right;
+  font-size: 14px;
+}
+
+.register .wrapper .form .link:hover a {
+  text-decoration: underline;
+  transition: text-decoration 0.1s ease-in-out;
+}
+
+@media (max-width: 580px) {
+  .register .wrapper {
+    width: 90%;
+  }
+}

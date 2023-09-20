@@ -1,0 +1,142 @@
+.sidebar {
+  width: 350px;
+  min-height: 100vh;
+  background-color: var(--blue);
+  color: var(--white);
+}
+
+.sidebar .wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar .wrapper .top {
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: var(--border);
+  padding: 0 1rem;
+}
+
+.sidebar .wrapper .top .heading {
+  font-size: 1.2rem;
+}
+
+.sidebar .wrapper .bottom {
+  height: 70px;
+  display: flex;
+  align-items: center;
+  border-top: var(--border);
+  padding: 0 1rem;
+}
+
+.sidebar .wrapper .center {
+  height: calc(100vh - 140px);
+  display: flex;
+  flex-direction: column;
+}
+
+.search-wrapper {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  border-bottom: var(--border);
+}
+
+.search-wrapper .input-wrapper {
+  height: 40px;
+  width: 100%;
+  border-radius: 0.3rem;
+  margin: 0 1rem;
+  display: flex;
+  align-items: center;
+  background-color: var(--bg-light);
+}
+
+.search-wrapper .input-wrapper i {
+  height: 100%;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+}
+
+.search-wrapper .input-wrapper input {
+  height: 100%;
+  width: 100%;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  font-size: 1rem;
+  padding: 0 0.5rem;
+  color: var(--white);
+}
+
+.search-wrapper .input-wrapper input::placeholder {
+  color: lightgray;
+}
+
+.sidebar .center .center-wrapper {
+  height: calc(100% - 60px);
+  overflow-y: scroll;
+}
+
+.items-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-item,
+.chat-item {
+  padding: 0.8rem 1rem;
+  border-bottom: var(--border-light);
+  cursor: pointer;
+}
+
+.contact-item:hover,
+.chat-item:hover,
+.chat-item.active {
+  background-color: var(--bg-light);
+}
+
+.chat-item {
+  display: flex;
+  gap: 1rem;
+}
+
+.chat-item-infos {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.chat-item-infos .avatar-infos {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.chat-item-infos .avatar-infos .username {
+  font-size: 1rem;
+}
+
+.chat-item-infos .avatar-infos .timeline {
+  font-size: 12px;
+  color: lightgray;
+}
+
+@media (max-width: 820px){
+  .sidebar{
+    width: 300px;
+  }
+}
+
+@media (max-width: 580px){
+  .sidebar{
+    width: 100%;
+  }
+}
