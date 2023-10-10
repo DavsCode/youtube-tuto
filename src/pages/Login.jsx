@@ -1,7 +1,12 @@
-import { useRef, useState } from "react";
+import { useContext, useRef, useState } from "react";
 import "../assets/css/login.css";
+import { loginAsync } from "../services/authServices";
+import { getUserAsync } from "../services/chatServices";
+import { Context } from "../context/Context";
+import { signIn } from "../context/Actions";
 
 export default function Login() {
+  const { dispatch } = useContext(Context);
   const emailRef = useRef();
   const passRef = useRef();
 
@@ -17,7 +22,7 @@ export default function Login() {
     }
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     setLoading(true);
@@ -27,10 +32,21 @@ export default function Login() {
       password: passRef.current.value,
     };
 
-    console.log("login", creds);
-
-    clearInputs();
-    setLoading(false);
+    try {
+      const res = await loginAsync(creds);
+      if (res?.user) {
+        const currentUser = await getUserAsync(res.user.uid);
+        if (currentUser) {
+          dispatch(signIn({ auth: res.user, user: currentUser }));
+          clearInputs();
+          setLoading(false);
+        }
+      }
+    } catch (error) {
+      const message = error.code;
+      setError(message);
+      setLoading(false);
+    }
   };
   return (
     <div className="login">

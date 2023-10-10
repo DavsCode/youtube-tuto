@@ -1,5 +1,7 @@
 import { useRef, useState } from "react";
 import "../assets/css/register.css";
+import { registerAsync } from "../services/authServices";
+import { useNavigate } from "react-router-dom";
 
 export default function Register() {
   const emailRef = useRef();
@@ -8,6 +10,8 @@ export default function Register() {
 
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
+
+  const navigate = useNavigate();
 
   const clearInputs = () => {
     if (emailRef?.current) {
@@ -21,7 +25,7 @@ export default function Register() {
     }
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     setLoading(true);
@@ -32,10 +36,16 @@ export default function Register() {
       password: passRef.current.value,
     };
 
-    console.log("register", creds);
-
-    clearInputs();
-    setLoading(false);
+    try {
+      await registerAsync(creds);
+      clearInputs();
+      setLoading(false);
+      navigate("/login");
+    } catch (error) {
+      const message = error.code;
+      setError(message);
+      setLoading(false);
+    }
   };
 
   return (

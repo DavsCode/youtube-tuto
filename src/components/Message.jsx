@@ -1,6 +1,7 @@
+import { format } from "timeago.js";
 import "../assets/css/message.css";
 
-export default function Message({ owner, msg, openImageViewer }) {
+export default function Message({ owner, msg, openImageViewer, scrollRef }) {
   return (
     <div className={owner ? "message owner" : "message"}>
       <div className="message-wrapper">
@@ -9,7 +10,7 @@ export default function Message({ owner, msg, openImageViewer }) {
             className="image-wrapper"
             onClick={() => openImageViewer(msg.images)}
           >
-            <img src={msg?.images[0]} alt="" />
+            <img src={msg?.images[0]?.url} alt="" />
             {msg?.images.length > 1 && (
               <div className="image-count">+{msg?.images.length - 1}</div>
             )}
@@ -17,7 +18,9 @@ export default function Message({ owner, msg, openImageViewer }) {
         )}
         <p>{msg?.message}</p>
       </div>
-      <span className="timeline">just now</span>
+      <span ref={scrollRef} className="timeline">
+        {format(msg?.createdAt?.toDate())}
+      </span>
     </div>
   );
 }

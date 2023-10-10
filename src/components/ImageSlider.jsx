@@ -22,7 +22,7 @@ export default function ImageSlider({ images, onClose }) {
         >
           {images.map((image, index) => (
             <SwiperSlide key={index}>
-              <img src={image} alt="" className="image-slide" />
+              <img src={image?.url} alt="" className="image-slide" />
             </SwiperSlide>
           ))}
         </Swiper>
