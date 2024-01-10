@@ -1,0 +1,98 @@
+.nav-menu {
+  position: absolute;
+  top: 40px;
+  right: 0;
+  width: 260px;
+  border-radius: var(--radius-05);
+  box-shadow: var(--box-shadow);
+  overflow: hidden;
+  visibility: hidden;
+  opacity: 0.2;
+  transition: all 0.2s ease-in-out;
+  z-index: 50;
+}
+
+.nav-menu.active {
+  top: 80px;
+  opacity: 1;
+  visibility: visible;
+}
+
+.nav-menu-wrapper.dark {
+  background-color: var(--black-3);
+  color: var(--darkwhite);
+}
+
+.nav-menu-wrapper.light {
+  background-color: var(--white);
+  color: var(--black-3);
+}
+
+.nav-menu-avatar {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid var(--white-tr05);
+  padding: 1rem;
+}
+
+.nav-menu-infos {
+  display: flex;
+  flex-direction: column;
+  margin-left: 0.8rem;
+}
+
+.nav-menu-infos h4 {
+  font-size: 1.1rem;
+}
+
+.nav-menu-infos span {
+  font-size: 14px;
+  cursor: pointer;
+  padding: 0.2rem 0;
+}
+
+.nav-menu-infos span:hover {
+  text-decoration: underline;
+}
+
+.nav-menu-links {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-menu-links a,
+.nav-menu-links .nav-menu-item {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.nav-menu-links a span,
+.nav-menu-links .nav-menu-item span {
+  margin-left: 1rem;
+}
+
+.nav-menu-links a:hover,
+.nav-menu-links .nav-menu-item:hover {
+  background-color: var(--white-tr05);
+}
+
+.nav-menu-links .auth {
+  padding: 1rem;
+}
+
+.nav-menu-links .auth .login-btn {
+  padding: 0.4rem 1.2rem;
+  border-radius: var(--radius-05);
+  border: none;
+  cursor: pointer;
+  background-color: var(--red);
+  color: var(--white);
+  margin-top: 0.5rem;
+  width: fit-content;
+}
+
+.nav-menu-links .auth .login-btn:hover {
+  background-color: var(--darkred);
+}

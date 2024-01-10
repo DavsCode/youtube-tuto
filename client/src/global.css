@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+:root {
+  --black-2: #222;
+  --black-3: #333;
+  --black-4: #444;
+  --white: #fff;
+  --darkwhite: #f5f5f5d2;
+  --red: #f03a0d;
+  --darkred: #d2320a;
+  --radius: 1rem;
+  --radius-03: 0.3rem;
+  --radius-05: 0.5rem;
+  --black-tr02: rgba(0, 0, 0, 0.2);
+  --black-tr03: rgba(0, 0, 0, 0.3);
+  --black-tr04: rgba(0, 0, 0, 0.4);
+  --black-tr05: rgba(0, 0, 0, 0.5);
+  --white-tr02: rgba(180, 180, 180, 0.2);
+  --white-tr03: rgba(180, 180, 180, 0.3);
+  --white-tr04: rgba(180, 180, 180, 0.4);
+  --white-tr05: rgba(180, 180, 180, 0.5);
+  --box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.5);
+  --box-shadow2: 0 1rem 1.5rem rgba(0, 0, 0, 0.5);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+*::-webkit-scrollbar {
+  height: 0.5rem;
+  width: 0.5rem;
+}
+
+*::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: rgba(180, 180, 180, 0.2);
+}
+
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 6.5rem;
+}
+
+body {
+  min-height: 100vh;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.app {
+  min-height: 100vh;
+}
+
+.app.dark {
+  background-color: var(--black-2);
+  color: var(--darkwhite);
+}
+
+.app.light {
+  background-color: var(--white);
+  color: var(--black-3);
+}
+
+.container {
+  max-width: 1920px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .container {
+    padding: 0 0.5rem;
+  }
+}

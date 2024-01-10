@@ -1,0 +1,123 @@
+.sidebar {
+  width: 100%;
+  min-height: 100vh;
+  position: fixed;
+  display: flex;
+  background-color: var(--black-tr04);
+  z-index: 100;
+  visibility: hidden;
+  transition: visibility 0.2s ease-in-out;
+}
+
+.sidebar.active {
+  visibility: visible;
+}
+
+.sidebar-wrapper {
+  width: 350px;
+  height: 100vh;
+  overflow-y: auto;
+  transform: translateX(-100%);
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  padding: 5rem 2rem;
+}
+
+.sidebar-wrapper.dark {
+  background-color: var(--black-2);
+}
+
+.sidebar-wrapper.light {
+  background-color: var(--white);
+}
+
+.sidebar.active .sidebar-wrapper {
+  transform: translateX(0);
+}
+
+.sidebar-wrapper a,
+.sidebar-wrapper .toggle-theme {
+  display: flex;
+  align-items: center;
+  padding: 0.8rem 0.5rem;
+  border-radius: var(--radius-05);
+  cursor: pointer;
+}
+
+.sidebar-wrapper a:hover,
+.sidebar-wrapper .toggle-theme:hover {
+  background-color: var(--white-tr02);
+}
+
+.sidebar-icon {
+  margin-right: 1rem;
+  font-size: 1.2rem;
+}
+
+.sidebar .separator {
+  margin: 1.5rem 0;
+}
+
+.sidebar .auth {
+  padding: 0 0.5rem;
+}
+
+.sidebar .auth .login-btn {
+  padding: 0.4rem 1.2rem;
+  border-radius: var(--radius-05);
+  border: none;
+  cursor: pointer;
+  background-color: var(--red);
+  color: var(--white);
+  margin-top: 0.5rem;
+  width: fit-content;
+}
+
+.sidebar .auth .login-btn:hover {
+  background-color: var(--darkred);
+}
+
+.terms {
+  display: flex;
+  flex-direction: column;
+}
+
+.terms span {
+  font-size: 0.8rem;
+}
+
+.terms-wrapper {
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.terms-wrapper span {
+  cursor: pointer;
+  margin-top: 0.5rem;
+}
+
+.terms-rights {
+  padding-bottom: 4rem;
+}
+
+.close-sidebar {
+  flex-grow: 1;
+  min-height: 100%;
+}
+
+@media (max-width: 768px) {
+  .sidebar-wrapper {
+    padding: 5rem 1rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .sidebar-wrapper {
+    width: 300px;
+    padding: 5rem 0.6rem;
+  }
+}

@@ -1,0 +1,62 @@
+.video-card {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.card-cover {
+  width: 100%;
+  height: 100%;
+  min-width: 250px;
+  min-height: 150px;
+  border-radius: var(--radius-05);
+  overflow: hidden;
+  background-color: var(--white-tr05);
+}
+
+.card-cover img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.card-details {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
+}
+
+.card-title {
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.card-title:hover {
+  text-decoration: underline;
+}
+
+.card-infos {
+  display: flex;
+  align-items: center;
+  margin-top: 0.5rem;
+  font-size: 12px;
+  font-weight: 500;
+  gap: 0.5rem;
+}
+
+.card-profile,
+.card-channel {
+  cursor: pointer;
+}
+
+.card-profile:hover,
+.card-channel:hover {
+  text-decoration: underline;
+}
+
+.card-views {
+  padding: 0 0.5rem;
+  border-left: 2px solid var(--white-tr04);
+  border-right: 2px solid var(--white-tr04);
+}
