@@ -1,0 +1,132 @@
+.comments {
+  margin-top: 2rem;
+}
+
+.comments-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.comments-wrapper form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.comments-wrapper form .inputs-wrapper {
+  display: flex;
+  width: 100%;
+}
+
+.comments-wrapper form .inputs-wrapper textarea {
+  flex-grow: 1;
+  margin-left: 1rem;
+  resize: none;
+  height: 60px;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-03);
+  outline: none;
+  border: none;
+  font-size: 14px;
+  background-color: var(--white-tr02);
+}
+
+.comments.dark textarea {
+  color: var(--darkwhite);
+}
+
+.inputs-actions {
+  margin-top: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+.inputs-actions button {
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  border-radius: var(--radius-03);
+  background-color: var(--white-tr02);
+  padding: 0.5rem 1rem;
+}
+
+.comments.dark .inputs-actions button {
+  color: var(--darkwhite);
+}
+
+.inputs-actions button:hover {
+  background-color: var(--white-tr05);
+}
+
+.comments.dark .inputs-actions button:hover {
+  background-color: var(--black-tr05);
+}
+
+.comment-list {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+}
+
+.comment-item {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid var(--white-tr02);
+  padding: 1rem 0.5rem;
+}
+
+.comment-item .user-infos {
+  display: flex;
+  align-items: center;
+}
+
+.comment-item .info-wrapper {
+  display: flex;
+  align-items: center;
+  font-size: 13px;
+  font-weight: 500;
+  margin-left: 0.5rem;
+  gap: 0.5rem;
+}
+
+.comment-body {
+  margin-top: 0.5rem;
+}
+
+.comment-body p {
+  font-size: 14px;
+}
+
+.comments-actions {
+  margin-top: 0.5rem;
+  gap: 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.comments-actions .action-item {
+  height: 22px;
+  width: 22px;
+  border-radius: 50%;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--white-tr02);
+  cursor: pointer;
+}
+
+.comments-actions .action-item.like {
+  width: fit-content;
+  padding: 0 0.5rem;
+  border-radius: 20px;
+}
+
+.comments-actions .action-item.like span {
+  margin-left: 0.5rem;
+  font-size: 11px;
+}

@@ -1,0 +1,8 @@
+.video-player video {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  border-radius: var(--radius-05);
+  overflow: hidden;
+  object-fit: cover;
+}
