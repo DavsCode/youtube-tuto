@@ -1,0 +1,140 @@
+.channel {
+  padding-top: 80px;
+}
+
+.channel-wrapper {
+  min-height: 100vh;
+}
+
+.channel-wrapper .banner {
+  height: 300px;
+  width: 100%;
+  border-radius: var(--radius-05);
+  overflow: hidden;
+}
+
+.channel-wrapper .banner img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.channel-wrapper .infos {
+  display: flex;
+  padding: 2rem 1rem;
+}
+
+.channel-wrapper .infos .avatar {
+  height: 120px;
+  width: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.channel-wrapper .infos .details {
+  margin-left: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.channel-wrapper .infos .details h4 {
+  font-size: 1.3rem;
+}
+
+.channel-wrapper .infos .details .stats,
+.channel-wrapper .infos .details .desc {
+  font-size: 15px;
+}
+
+.channel-wrapper .infos .details button {
+  height: 35px;
+  font-size: 15px;
+  padding: 0 1rem;
+  width: fit-content;
+  border-radius: 20px;
+  border: none;
+  font-weight: 500;
+  color: var(--darkwhite);
+  background-color: var(--red);
+  cursor: pointer;
+}
+
+.channel-wrapper .infos .details button:hover {
+  background-color: var(--darkred);
+}
+
+.channel-wrapper .tab-wrapper {
+  margin-top: 1rem;
+  padding: 0 1rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  border-bottom: 3px solid var(--white-tr02);
+}
+
+.channel-wrapper .tab-wrapper .tab-item {
+  padding: 0.5rem 1.5rem;
+  display: block;
+  cursor: pointer;
+  border-top-left-radius: var(--radius-03);
+  border-top-right-radius: var(--radius-03);
+}
+
+.channel-wrapper .tab-wrapper .tab-item.active {
+  background-color: var(--white-tr05);
+}
+
+.channel-wrapper .tab-wrapper .tab-item:hover {
+  background-color: var(--white-tr02);
+}
+
+.tab-content .list-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 2rem 1.2rem;
+  padding: 3rem 0;
+}
+
+.channel-settings {
+  padding: 0.5rem;
+}
+
+@media (max-width: 640px) {
+  .channel-wrapper .banner {
+    height: 200px;
+  }
+
+  .channel-wrapper .infos {
+    display: flex;
+    padding: 1rem 0.5rem;
+  }
+
+  .channel-wrapper .infos .avatar {
+    height: 70px;
+    width: 70px;
+  }
+
+  .channel-wrapper .infos .details {
+    margin-left: 0.6rem;
+    gap: 0.4rem;
+  }
+
+  .channel-wrapper .infos h4 {
+    font-size: 1rem;
+  }
+
+  .channel-wrapper .details .stats,
+  .channel-wrapper .details .desc {
+    font-size: 14px;
+  }
+
+  .channel-wrapper .details button {
+    height: 30px;
+    font-size: 14px;
+  }
+
+  .tab-content .list-items {
+    padding: 2rem 0;
+  }
+}

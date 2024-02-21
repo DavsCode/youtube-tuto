@@ -1,0 +1,42 @@
+.drag-drop {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px dashed var(--white-tr05);
+  background-color: var(--white-tr02);
+  border-radius: var(--radius-05);
+  padding: 2rem;
+  gap: 1rem;
+}
+
+.drag-drop .icon {
+  font-size: 5rem;
+  color: var(--white-tr05);
+}
+
+.drag-drop h4 {
+  color: var(--white-tr05);
+}
+
+.drag-drop .filename {
+  font-size: 15px;
+}
+
+.drag-drop .upload-video {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-05);
+  border: 2px solid var(--white-tr05);
+  cursor: pointer;
+}
+
+.drag-drop .upload-video .video-icon {
+  font-size: 1.5rem;
+}
+
+.drag-drop .upload-video span {
+  font-size: 13px;
+}

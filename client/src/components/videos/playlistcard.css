@@ -1,0 +1,59 @@
+.playlist-card {
+  display: flex;
+  flex-direction: column;
+  border-radius: var(--radius-05);
+  cursor: pointer;
+}
+
+.playlist-card .wrapper {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.playlist-card .cover-wrapper {
+  height: 100%;
+  width: 100%;
+  min-width: 250px;
+  min-height: 150px;
+  border-radius: var(--radius-05);
+  overflow: hidden;
+  position: relative;
+}
+
+.playlist-card .cover-wrapper .cover {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.playlist-card .icon-wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--white);
+  font-size: 1.4rem;
+  background-color: var(--black-tr05);
+}
+
+.playlist-card .icon-wrapper span {
+  padding: 0.5rem;
+}
+
+.playlist-card .title {
+  padding: 0.3rem 0.5rem;
+  font-size: 15px;
+  font-weight: 500;
+  --max-lines: 2;
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: var(--max-lines);
+}

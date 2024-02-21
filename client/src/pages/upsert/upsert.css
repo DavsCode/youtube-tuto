@@ -1,0 +1,75 @@
+.upsert {
+  padding: 100px 0;
+}
+
+.upsert .wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.upsert .wrapper .heading {
+  font-size: 1.2rem;
+}
+
+.upsert .wrapper .inputs-wrapper {
+  display: flex;
+  gap: 2rem;
+}
+
+.upsert .wrapper .inputs-wrapper .left,
+.upsert .wrapper .inputs-wrapper .right {
+  flex: 1;
+}
+
+.upsert-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.upsert-form input,
+.upsert-form textarea,
+.upsert-form .upload-cover {
+  padding: 0.5rem 0.8rem;
+  margin-bottom: 1rem;
+  font-size: 15px;
+  outline: none;
+  background-color: transparent;
+  border-radius: var(--radius-03);
+  border: 2px solid var(--white-tr05);
+}
+
+.upsert-form .upload-cover {
+  display: flex;
+  gap: 0.8rem;
+  cursor: pointer;
+}
+
+.upsert-form textarea {
+  resize: none;
+  min-height: 180px;
+  max-height: 350px;
+}
+
+.upsert-form button {
+  padding: 0.5rem;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--darkwhite);
+  border: none;
+  border-radius: var(--radius-03);
+  background-color: var(--red);
+  cursor: pointer;
+}
+
+.upsert-form button:hover {
+  background-color: var(--darkred);
+}
+
+@media (max-width: 640px) {
+  .upsert .wrapper .inputs-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+}

@@ -1,0 +1,94 @@
+.login {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login .wrapper {
+  display: flex;
+  flex-direction: column;
+  max-width: 480px;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: var(--box-shadow);
+}
+
+.login .wrapper.light {
+  background-color: var(--white);
+}
+
+.login .wrapper.dark {
+  background-color: var(--black-3);
+}
+
+.login .wrapper .heading {
+  font-size: 1.7rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.login .wrapper .error-msg {
+  padding-top: 1rem;
+  color: red;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.login .wrapper .form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login .wrapper .form input {
+  padding: 10px 15px;
+  outline: none;
+  margin-top: 10px;
+  font-size: 14px;
+  border-radius: var(--radius-03);
+  border: 2px solid var(--white-tr05);
+  background-color: transparent;
+  margin-bottom: 0.5rem;
+}
+
+.login .wrapper .form button {
+  margin-top: 1rem;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  border-radius: var(--radius-03);
+  font-weight: 500;
+  color: var(--white);
+  background-color: var(--red);
+}
+
+.login .wrapper .form button:hover {
+  background-color: var(--darkred);
+}
+
+.login .wrapper .form .login-terms {
+  padding: 0.5rem 0;
+  font-size: 0.9rem;
+}
+
+.login .wrapper .form .action {
+  font-size: 0.9rem;
+  margin-top: 1rem;
+}
+
+.login .wrapper .form .action a {
+  font-size: 0.9rem;
+}
+
+.login .wrapper .form .action:hover a {
+  text-decoration: underline;
+}
+
+@media (max-width: 640px) {
+  .login .wrapper {
+    width: 95%;
+    padding: 2rem 0.8rem;
+  }
+}
