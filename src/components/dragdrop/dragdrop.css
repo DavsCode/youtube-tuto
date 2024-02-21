@@ -1,0 +1,47 @@
+.dragdrop {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 4px dashed gray;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  gap: 1rem;
+}
+
+.dragdrop i {
+  font-size: 5rem;
+  color: lightgray;
+}
+
+.dragdrop h4 {
+  color: #555;
+}
+
+.dragdrop label input {
+  display: none;
+}
+
+.dragdrop label .upload-btn {
+  padding: 0.6rem 1rem;
+  border-radius: 0.5rem;
+  background-color: teal;
+  color: white;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+
+.temp-images {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.temp-images img {
+  height: 100px;
+  width: 75px;
+  object-fit: cover;
+  border-radius: 5px;
+}

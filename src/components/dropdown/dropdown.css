@@ -1,0 +1,74 @@
+.dropdown {
+  position: relative;
+}
+
+.dropdown .current-option {
+  border: 2px solid gray;
+  padding: 0.5rem 1rem;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dropdown .current-option .arrow {
+  width: 0;
+  height: 0;
+  border-left: 0.45rem solid transparent;
+  border-right: 0.45rem solid transparent;
+  border-top: 0.45rem solid gray;
+  cursor: pointer;
+}
+
+.dropdown .current-option .arrow.active {
+  border-top: initial;
+  border-bottom: 0.45rem solid gray;
+}
+
+.dropdown .options {
+  position: absolute;
+  top: 110%;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  max-height: 15rem;
+  width: 100%;
+  overflow-y: auto;
+  border-radius: 0.3rem;
+  background-color: #fff;
+  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-2rem);
+  transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
+  z-index: 100;
+}
+
+.dropdown .options.active {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.dropdown .options .option {
+  width: 100%;
+  padding: 0.5rem 0.8rem;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.dropdown .options .option:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.dropdown .options .option.selected {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.dropdown .options .option i {
+  min-width: 40px;
+  display: flex;
+  justify-content: center;
+}
